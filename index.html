@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Shop Online With SanShop
+    </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div id="upperHead">
+            <div>
+                <p>Sell With Us | Call US | Download App :</p>
+                <img src="/android2.png" alt="">
+                <p></p>
+                <img src="/apple.png" alt="">
+                <img src="/windows.png" alt="">
+            </div>
+        </div>
+        <div id="head">
+            <img src="/WhatsApp Image 2023-01-17 at 3.20.47 PM.jpeg" alt="" id="logo">
+            <form action="">
+                <input type="search" placeholder="What are you looking for?" id="search">
+                <button id="srcbtn">search</button>
+            </form>
+            <div id="noti">
+                <img src="/location.png" alt="">
+                <img src="/notification.jpg" alt="">
+                <img src="/wishlist.png" alt="">
+                <img src="/cart.png" alt="">
+            </div>
+            <div id="login">
+                <p>Login</p>
+                <p>Sign In</p>
+            </div>
+        </div>
+        <div id="catagories">
+            <div>
+                <div>MObile & More</div>
+                <p>MEN</p>
+                <p>WOMEN</p>
+                <p>HOME & KITCHEN</p>
+                <p>APPLIANCE</p>
+                <p>SPORTS & MORE</p>
+                <P>ESSENTIALS</P>
+                <p>OFFERS</p>
+                <p>GLOBAL SHOPPING</p>
+            </div>
+        </div>
+    </div>
+    <div id="catagories2">
+        <p>TImes Sales</p>
+        <p>Flu Care</p>
+        <p>Food & Beverage</p>
+        <p>Personal Hygeine</p>
+        <p>Home Cleaning</p>
+        <p>Nutrition & Supplements</p>
+        <p>Kitchen & Dining</p>
+        <p>Refurbished MObiles</p>
+        <p>Mobile Accessories</p>
+    </div>
+    <div id="ad"></div>
+    <div id="adbar">
+        <div id="nameBar">
+            <img src="" alt="" id="slide">
+            <div id="name">
+                <div id="btn1">Grand Republic Sale</div>
+                <div id="btn2">PrepBuzz</div>
+                <div id="btn3">Jaw Dropping Deals</div>
+                <div id="btn4">JMAX Smartphone</div>
+                <div id="btn5">ASUS</div>
+            </div>
+        </div>
+        <div id="sideProduct">
+            <img src="https://cdn.shopclues.com/images/banners/2022/dec/06/Platinum1_SYM_06Dec22.jpg" alt="">
+            <img src="https://cdn.shopclues.com/images/banners/2022/dec/06/Platinum2_SYM_06Dec22.jpg" alt="">
+            <img src="https://cdn.shopclues.com/images/banners/2022/dec/02/Platinum3_Esha_2ndDec22.jpg" alt="">
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2>Deals of The Day</h2>
+    <div id="DOFD">
+
+    </div>
+    <h2 id="sec2">Your Gadgets Store</h2>
+    <div id="ygs"></div>
+    <h2 id="sec3">Daily Essentials</h2>
+    <div id="DE"></div>
+</body>
+<script>
+
+    let slideShow = ["https://cdn.shopclues.com/images/banners/2023/Jan/18/HB1_GRDS_Web_NCP_18Jan23.jpg",
+        "https://cdn.shopclues.com/images/banners/2023/Jan/18/HB2_Prebuzz_Web_NCP_18Jan23.jpg",
+        "https://cdn.shopclues.com/images/banners/2023/Jan/18/Jdd_HB3_Web_Riya_18Jan23.jpg",
+        "https://cdn.shopclues.com/images/banners/2023/Jan/18/HB4_JMAX_Web_Esha_18Jan23.jpg", "https://cdn.shopclues.com/images/banners/2023/Jan/15/HB5_Asus_Web_Riya_15Jan22.jpg"]
+
+
+    let img = document.getElementById("slide")
+    img.setAttribute("src", slideShow[0])
+
+    let i = 0
+    setInterval(() => {
+        if (i == slideShow.length) {
+            i = 0
+        } else {
+            img.src = slideShow[i]
+            i++
+        }
+    }, 1000);
+
+    let btn1 = document.getElementById("btn1")
+    btn1.addEventListener("mouseenter", () => {
+        img.src = slideShow[0]
+    })
+    let btn2 = document.getElementById("btn2")
+    btn2.addEventListener("mouseenter", () => {
+        img.src = slideShow[1]
+    })
+    let btn3 = document.getElementById("btn3")
+    btn3.addEventListener("mouseenter", () => {
+        img.src = slideShow[2]
+    })
+    let btn4 = document.getElementById("btn4")
+    btn4.addEventListener("mouseenter", () => {
+        img.src = slideShow[3]
+    })
+    let btn5 = document.getElementById("btn5")
+    btn5.addEventListener("mouseenter", () => {
+        img.src = slideShow[4]
+    })
+
+    let products = [
+        {
+            id: "1",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg"
+        },
+        {
+            id: "2",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/81476/200/200/135627858-81476269-1665754103.jpg"
+        },
+        {
+            id: "3",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/71795/200/200/128902274-71795769-1653057803.jpg"
+        },
+        {
+            id: "4",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115737/200/200/152853766-115737455-1637323013.jpg"
+        },
+        {
+            id: "5",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg"
+        },
+        {
+            id: "6",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115044/200/200/152634665-115044372-1629705035.jpg"
+        }
+    ]
+
+    let dfd = document.getElementById("DOFD")
+
+    function display(products) {
+        dfd.innerHTML = ""
+        products.forEach((ele, ind) => {
+            let div = document.createElement("div")
+            let pic = document.createElement("img")
+            pic.setAttribute("src", ele.image)
+
+            let h4 = document.createElement("p")
+            h4.innerText = ele.name
+            let price = document.createElement("h4")
+            price.innerText = ele.price
+            div.append(pic, h4, price)
+            dfd.append(div)
+        })
+    }
+    display(products)
+
+    let gadgets = [
+        {
+            id: "1",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/95357/200/200/142826933-95357827-1664550819.jpg"
+        },
+        {
+            id: "2",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/112883/200/200/151860087-112883707-1664649308.jpg"
+        },
+        {
+            id: "3",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/112883/200/200/151860087-112883707-1664649308.jpg"
+        },
+        {
+            id: "4",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/98012/200/200/144475154-98012302-1664648956.jpg"
+        },
+        {
+            id: "5",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/95155/200/200/142698419-95155481-1653692385.jpg"
+        },
+        {
+            id: "6",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/95123/200/200/142672875-95123237-1645016499.jpg"
+        }
+    ]
+
+    let ygs = document.getElementById("ygs")
+    function gadDispaly(gadgets) {
+        // ysg.innerHTML = ""
+        gadgets.forEach((ele, ind) => {
+            let div2 = document.createElement("div")
+            let pic2 = document.createElement("img")
+            pic2.setAttribute("src", ele.image)
+            let name = document.createElement("p")
+            name.innerText = ele.name
+            let price2 = document.createElement("h4")
+            price2.innerText = ele.price
+            div2.append(pic2, name, price2)
+            ygs.append(div2)
+        })
+    }
+    gadDispaly(gadgets)
+
+    let DailyEs = [
+        {
+            id: "1",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg"
+        },
+        {
+            id: "2",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/105589/320/1/149278289-105589933-1585251885.jpg"
+        },
+        {
+            id: "3",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg"
+        },
+        {
+            id: "4",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/105520/280/1/149254102-105520442-1584863770.jpg"
+        },
+        {
+            id: "5",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images/thumbnails/42332/280/1/966030079473255231PUTPaCZnL146606056314665883171470319810.jpg"
+        },
+        {
+            id: "6",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/105577/320/320/149274414-105577366-1585235325.jpg"
+        }
+    ]
+
+    let delEs = document.getElementById("DE")
+
+    function displayDe(DailyEs) {
+        DailyEs.forEach((ele, ind) => {
+            let div3 = document.createElement("div")
+            let images = document.createElement("img")
+            images.setAttribute("src", ele.image)
+            let name = document.createElement("p")
+            name.innerText = ele.name
+            let price = document.createElement("h4")
+            price.innerText = ele.price
+            div3.append(images, name, price)
+
+            delEs.append(div3)
+        })
+    }
+    displayDe(DailyEs)
+
+
+</script>
+
+</html>

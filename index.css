@@ -1,0 +1,320 @@
+body {
+    background-color: aliceblue;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+}
+
+#upperHead {
+    width: 1500px;
+    display: flex;
+    /* border: solid black; */
+    justify-content: right;
+    margin: auto;
+    background-color: ghostwhite;
+
+}
+
+#upperHead>div {
+    display: flex;
+    justify-content: right;
+    color: grey;
+    width: 23%;
+    justify-content: space-around;
+    /* border: solid black; */
+}
+
+#upperHead>div>img {
+    height: 20px;
+}
+
+#head {
+    width: 1520px;
+    /* border: solid black; */
+    display: flex;
+    align-items: center;
+    background-color: ghostwhite;
+    padding-right: 10px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    justify-content: space-around;
+    margin: auto;
+}
+
+#head>#logo {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    /* margin-left: 5px; */
+}
+
+form {
+    display: flex;
+    width: 60%;
+}
+
+#search {
+    height: 40px;
+    width: 100%;
+    margin-left: 60px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: rgb(241, 224, 224);
+}
+
+#srcbtn {
+    height: 40px;
+    width: 120px;
+    margin-left: 0;
+    border-radius: 5px;
+    font-size: 17px;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #FF4500;
+    border-color: rgb(241, 224, 224);
+    ;
+}
+
+#noti {
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    width: 200px;
+    padding-left: 30px;
+}
+
+#noti>img {
+    width: 15%;
+}
+
+#login {
+    width: 10%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* border: solid black; */
+    justify-content: space-between;
+    justify-content: space-around;
+    margin-right: 0;
+    margin-left: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+}
+
+#catagories {
+    width: 1525px;
+    /* border: solid black; */
+    background-color: #24A3B5;
+    color: aliceblue;
+}
+
+#catagories>div {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    /* justify-content: space-around; */
+    width: 70%;
+    margin: auto;
+    font-size: 80%;
+    font-family: sans-serif;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    /* border: solid black; */
+}
+
+#catagories>div>:hover {
+    text-align: center;
+    background-color: aliceblue;
+    height: 50px;
+    color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#catagories2 {
+    /* margin-top: 500px; */
+    width: 1535px;
+    display: flex;
+    /* border: solid black; */
+    justify-content: space-around;
+    color: grey;
+    background-color: aliceblue;
+    padding-top: 18px;
+    padding-bottom: 8px;
+    align-items: center;
+    font-size: 13px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: sans-serif;
+}
+
+#catagories2 :hover {
+    color: teal;
+}
+
+#adbar {
+    width: 1535px;
+    /* border: solid black; */
+    margin: auto;
+    display: flex;
+    margin-top: 200px;
+
+}
+
+#nameBar {
+    width: 1250px;
+    /* border: solid black; */
+    margin-left: 10px;
+    /* padding-left: 10px; */
+    padding-bottom: 5px;
+    background-color: azure;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#nameBar>img {
+    width: 1250px;
+    height: 345px;
+    border-radius: 15px;
+    /* border: solid black; */
+}
+
+#name {
+    width: 1280px;
+    display: flex;
+    justify-content: space-around;
+    /* border: solid black; */
+    padding-top: 20px;
+    font-size: 17px;
+    align-items: center;
+}
+
+#sideProduct {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    /* border: solid black; */
+}
+
+#sideProduct>img {
+    width: 240px;
+    /* border-radius: 15px; */
+}
+
+#name>div {
+    width: 180px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border-bottom: solid #24A3B5;
+}
+
+#name>div:hover {
+    color: #24A3B5;
+}
+
+h2 {
+    margin-left: 10px;
+    font-family: Helvetica;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#DOFD{
+    margin: auto;
+    margin-top: 13px;
+    /* border: solid black; */
+    width: 1500px ;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    /* gap: 15px; */
+    background-color: white;
+}
+#DOFD>div{
+    /* border: solid black; */
+    display: flex;
+    flex-direction: column;
+    /* border: black solid; */
+    font-family: sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#DOFD>div>img{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+#DOFD>div:hover{
+    border:#24A3B5 solid;
+}
+#DOFD>div>p{
+    color: grey;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+#DOFD>div>h4 {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    font-size: medium;
+}
+#sec2{
+    margin-top: 50px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#ygs{
+    margin: auto;
+    margin-top: 13px;
+    /* border: solid black; */
+    width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* gap: 15px; */
+    background-color: white;
+}
+#ygs>div {
+    /* border: solid black; */
+    display: flex;
+    flex-direction: column;
+    /* border: black solid; */
+    font-family: sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#ygs>div>img {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+#ygs>div:hover {
+    border: #24A3B5 solid;
+}
+#ygs>div>p {
+    color: grey;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+#ygs>div>h4 {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    font-size: medium;
+}
