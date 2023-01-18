@@ -1,0 +1,9 @@
+https://63c63f43dcdc478e15bda806.mockapi.io/:endpoint
+
+  let images = document.createAttribute("img")
+            images.setAttribute("src", ele.image)
+            let name = document.createElement("p")
+            name.innerText = ele.name
+            let price = document.createElement("h4")
+            price.innerText = ele.price
+            div3.append(images, name, price)
