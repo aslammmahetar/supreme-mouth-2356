@@ -41,7 +41,7 @@
         </div>
         <div id="catagories">
             <div>
-                <div>MObile & More</div>
+                <p> MOBILE & MORE</p>
                 <p>MEN</p>
                 <p>WOMEN</p>
                 <p>HOME & KITCHEN</p>
@@ -92,6 +92,80 @@
     <div id="ygs"></div>
     <h2 id="sec3">Daily Essentials</h2>
     <div id="DE"></div>
+    <h2 id="sec4">Prime Mall</h2>
+    <div id="PM"></div>
+    <h2 id="sec5">Trending Fashion Zone</h2>
+    <div id="TFZ"></div>
+    <div id="BOT">
+        <img src="/Screenshot_20230119_124920.png" alt="">
+        <img src="/Screenshot_20230119_124941.png" alt="">
+        <img src="/Screenshot_20230119_124950.png" alt="">
+    </div>
+    <div id="docs">
+        <div>
+            <h4>Shopper Central</h4>
+            <br>
+            <p>Easy Returns & Replacement</p>
+            <p>Sign In/Register</p>
+            <p>Our Policies</p>
+            <p>ClueBucks</p>
+            <p>Payment Options</p>
+            <p>ShopSan Surety</p>
+            <p>FAQ's</p>
+            <p>Service Center</p>
+            <p>User Agreement</p>
+        </div>
+        <div>
+            <h4>Merchant Central</h4>
+            <br>
+            <p>Merchant Panel</p>
+            <p>How To sell</p>
+            <p>Commision Structure</p>
+            <p>Fullfillment Policy</p>
+            <p>Policies & Rules</p>
+            <p>User Agreement</p>
+            <p>Testimonial</p>
+            <p>Seller Summit</p>
+            <p>Merchant Blog</p>
+            <p>Developer Resource</p>
+        </div>
+        <div>
+            <h4>About Us</h4>
+            <br>
+            <p>History</p>
+            <p>Band of Trust</p>
+            <p>In The News</p>
+            <p>Awards</p>
+            <p>
+                Careers
+            </p>
+            <p>Blog</p>
+        </div>
+        <div>
+            <h4>Contact Us</h4>
+            <br>
+            <p>Merchant Support</p>
+            <p>Bulk Orders</p>
+            <p>Press</p>
+        </div>
+        <div>
+            <h4>Press</h4>
+            <br>
+            <p>In the News</p>
+        </div>
+    </div>
+    <div id="footer">
+        <h3>Keep In Touch</h3>
+        <div>
+            <img src="/Facebook.png" alt="">
+            <img src="/pinterest.jpg" alt="">
+            <img src="/linked in.png" alt="">
+            <img src="/youtube2.png" alt="">
+            <img src="/Twitter.jpg" alt="">
+            <!-- <img src="" alt=""> -->
+        </div>
+        <div></div>
+    </div>
 </body>
 <script>
 
@@ -260,31 +334,31 @@
             id: "2",
             name: "Venerate headphone Stand",
             price: "₹269 87%off",
-            image: "https://cdn.shopclues.com/images1/thumbnails/105589/320/1/149278289-105589933-1585251885.jpg"
+            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg"
         },
         {
             id: "3",
             name: "Venerate headphone Stand",
             price: "₹269 87%off",
-            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg"
+            image: "https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg"
         },
         {
             id: "4",
             name: "Venerate headphone Stand",
             price: "₹269 87%off",
-            image: "https://cdn.shopclues.com/images1/thumbnails/105520/280/1/149254102-105520442-1584863770.jpg"
+            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg"
         },
         {
             id: "5",
             name: "Venerate headphone Stand",
             price: "₹269 87%off",
-            image: "https://cdn.shopclues.com/images/thumbnails/42332/280/1/966030079473255231PUTPaCZnL146606056314665883171470319810.jpg"
+            image: "https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg"
         },
         {
             id: "6",
             name: "Venerate headphone Stand",
             price: "₹269 87%off",
-            image: "https://cdn.shopclues.com/images1/thumbnails/105577/320/320/149274414-105577366-1585235325.jpg"
+            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg"
         }
     ]
 
@@ -306,6 +380,69 @@
     }
     displayDe(DailyEs)
 
+    let primeMall = [
+        {
+            name: "D20 Fitness SmartWatch",
+            img: "https://gd.image-gmkt.com/li/066/347/1706347066.g_800-w-st_g.jpg",
+            price: "₹499 62%Off"
+        },
+        {
+            name: "D20 Fitness SmartWatch",
+            img: "https://gd.image-gmkt.com/li/397/137/1729137397.g_800-w-st_g.jpg",
+            price: "₹499 62%Off"
+        }
+    ]
+
+    let pm = document.getElementById("PM")
+
+    function displayPm(primeMall) {
+        primeMall.forEach((ele, ind) => {
+            let pmdiv = document.createElement("div")
+            let imag = document.createElement("img")
+            imag.setAttribute("src", ele.img)
+            let name = document.createElement("p")
+            name.innerText = ele.name
+            let price = document.createElement("h4")
+            price.innerText = ele.price
+            pmdiv.append(imag, name, price)
+            pm.append(pmdiv)
+        })
+    }
+    displayPm(primeMall)
+
+    let tfz = [
+        {
+            name: "Trendyz men hoodie",
+            price: "₹499 44%off",
+            img: "https://cdn.shopclues.com/images1/thumbnails/95098/200/200/142654363-95098986-1653063215.jpg"
+        },
+        {
+            name: "Trendyz men hoodie",
+            price: "₹499 44%off",
+            img: "https://cdn.shopclues.com/images1/thumbnails/104223/200/200/148695185-104223914-1668508109.jpg"
+        },
+        {
+            name: "Trendyz men hoodie",
+            price: "₹499 44%off",
+            img: "https://cdn.shopclues.com/images1/thumbnails/105344/200/200/149172710-105344978-1666996516.jpg"
+        }
+    ]
+    let tf = document.getElementById("TFZ")
+
+    function displayTfz(tfz) {
+        tfz.forEach((ele, ind) => {
+            let div4 = document.createElement("div")
+            let img = document.createElement("img")
+            img.setAttribute("src", ele.img)
+            let name = document.createElement("p")
+            name.innerText = ele.name
+            let price = document.createElement("h4")
+            price.innerText = ele.price
+            div4.append(img, name, price)
+            tf.append(div4)
+        })
+    }
+    displayTfz(tfz)
 
 </script>
 

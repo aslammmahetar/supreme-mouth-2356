@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div id="container">
+        <img src="/Screenshot_20230119_043804.png" alt="">
+        <div class="form">
+            <h1>Login</h1>
+            <form>
+                <div class="email">
+                    <p>Enter Your E-mail</p>
+                    <input type="email" required placeholder="Enter Your Email" id="email">
+                </div>
+                <div class="pass">
+                    <p>Enter your Password</p>
+                    <input type="password" required placeholder="Enter Your Password" id="pass">
+                </div>
+                <div class="forget">Forger Password?</div>
+                <a href=""><input type="submit" value="Login" id="login">
+                </a>
+                <div class="signUp">
+                    Not a member? <a href="">Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+
+    let credential = JSON.parse(localStorage.getItem("credential")) || []
+
+    let email = document.getElementById("email")
+    let pass = document.getElementById("pass")
+    let formEl = document.querySelector("form")
+
+    formEl.addEventListener("submit", (e) => {
+        e.preventDefault()
+        let inpData = {
+            email: email.value,
+            pass: pass.value
+        }
+        credential.push(inpData)
+        localStorage.setItem("credential", JSON.stringify(credential))
+    })
+
+
+</script>
+
+
+
+
+</html>

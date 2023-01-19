@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="singUp.css">
+</head>
+
+<body>
+    <div id="container">
+        <img src="/Screenshot_20230119_043804.png" alt="">
+        <div class="form">
+            <h1>Register Here!</h1>
+            <form>
+                <p>First name : </p>
+                <input type="text" placeholder="Enter your first name" id="fname">
+
+                <p>Last Name :</p>
+                <input type="text" placeholder="Enter your Last Name" id="lname">
+
+                <p>Enter Your E-mail</p>
+                <input type="email" required placeholder="Enter Your Email" id="email">
+
+                <p>Enter your Password</p>
+                <input type="password" required placeholder="Enter Your Password" id="pass">
+
+                <!-- <a href=""> -->
+                <input type="submit" value="Sign Up" id="login">
+                <!-- </a> -->
+                <br>
+                <span> Already a member?</span> <a href="/Login.html">Login Here!</a>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    let firstName = document.getElementById("fname")
+    let lastName = document.getElementById("lname")
+    let email = document.getAnimations("email")
+    let pass = document.getElementById("pass")
+    let formEl = document.querySelector("form")
+
+    let sign = JSON.parse(localStorage.getItem("SignUp")) || []
+
+    formEl.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let formData = {
+            fname: firstName.value,
+            lname: lastName.value,
+            mail: email.value,
+            password: pass.value
+        }
+        sign.push(formData)
+        localStorage.setItem("SignUp", JSON.stringify(sign))
+    })
+
+
+</script>
+
+</html>
