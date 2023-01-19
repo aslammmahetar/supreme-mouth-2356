@@ -1,0 +1,85 @@
+#container {
+    margin: auto;
+    margin-top: 80px;
+    width: 850px;
+    height: 580px;
+    border: solid black;
+    display: flex;
+    background-color: aliceblue;
+}
+
+#container>img {
+    height: 578px;
+}
+
+.form {
+    /* border: solid black; */
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    /* align-items: center; */
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    border-bottom: 1px solid silver;
+}
+#fname{
+    width: 80%;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+#lname {
+    width: 80%;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+#email {
+    width: 80%;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+#pass {
+    width: 80%;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+.forget{
+    text-align: right;
+    padding-right: 100px;
+    margin-top: 10px;
+}
+#login{
+    width: 82%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: larger;
+    font-family: sans-serif;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+p{
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 8px;
+}
+span{
+    text-align: center;
+    text-decoration: none;
+    margin-left: 25%;
+    
+}

@@ -1,0 +1,58 @@
+body{
+    /* background-color:aliceblue */
+}
+#container{
+    margin: auto;
+    margin-top: 80px;
+    width: 850px;
+    height: 580px;
+    border: solid black;
+    display: flex;
+    background-color: aliceblue;
+}
+#container> img{
+    height: 578px;
+}
+.form{
+    /* border: solid black; */
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+h1{
+    text-align: center;
+    font-family: sans-serif;
+    border-bottom: 1px solid silver;
+}
+form{
+    margin-top: 50px;
+    padding-left: 70px;
+}
+.pass {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.email > input{
+    width: 80%;
+    padding: 10px;
+}
+.pass > input {
+    margin-top: 0px;
+    width: 80%;
+    padding: 10px;
+}
+.forget{
+    text-align: right;
+    padding-right: 88px;
+    margin-top: 10px;
+}
+#login{
+    border-radius: 10px;
+    font-size: larger;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    width: 85%;
+    margin-top: 50px;
+    border-width: thin; 
+}
