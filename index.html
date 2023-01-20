@@ -26,7 +26,7 @@
             <img src="/WhatsApp Image 2023-01-17 at 3.20.47 PM.jpeg" alt="" id="logo">
             <form action="">
                 <input type="search" placeholder="What are you looking for?" id="search">
-                <button id="srcbtn">search</button>
+                <input id="srcbtn" value="Search" type="submit">
             </form>
             <div id="noti">
                 <img src="/location.png" alt="">
@@ -35,8 +35,8 @@
                 <img src="/cart.png" alt="">
             </div>
             <div id="login">
-                <p>Login</p>
-                <p>Sign In</p>
+                <p><a href="/Login.html"> Login</a></p>
+                <p><a href="/signup.html"> Sign In</a></p>
             </div>
         </div>
         <div id="catagories">
@@ -84,7 +84,7 @@
     </div>
     <br>
     <br>
-    <h2>Deals of The Day</h2>
+    <h2 id="chnge">Deals of The Day</h2>
     <div id="DOFD">
 
     </div>
@@ -430,6 +430,7 @@
     let tf = document.getElementById("TFZ")
 
     function displayTfz(tfz) {
+
         tfz.forEach((ele, ind) => {
             let div4 = document.createElement("div")
             let img = document.createElement("img")
@@ -443,6 +444,227 @@
         })
     }
     displayTfz(tfz)
+
+    let forSearch = [
+        {
+            id: "1",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "2",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/81476/200/200/135627858-81476269-1665754103.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "3",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/71795/200/200/128902274-71795769-1653057803.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "4",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115737/200/200/152853766-115737455-1637323013.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "5",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "6",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/115044/200/200/152634665-115044372-1629705035.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "7",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/95357/200/200/142826933-95357827-1664550819.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "8",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/112883/200/200/151860087-112883707-1664649308.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "9",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/112883/200/200/151860087-112883707-1664649308.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "10",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/98012/200/200/144475154-98012302-1664648956.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "11",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/95155/200/200/142698419-95155481-1653692385.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "12",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/95123/200/200/142672875-95123237-1645016499.jpg",
+            cat: "Electric accessories",
+            section: "Deals Of the day"
+        },
+        {
+            id: "13",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg",
+            cat: "essential",
+            section: "Daily Essentials"
+        },
+        {
+            id: "14",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg",
+            cat: "essential",
+            section: "Daily Essentials"
+        },
+        {
+            id: "15",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg",
+            cat: "essential",
+            section: "Daily Essentials"
+        },
+        {
+            id: "16",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg",
+            cat: "essential",
+            section: "Daily Essentials"
+        },
+        {
+            id: "17",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg",
+            cat: "essential",
+            section: "Daily Essentials"
+        },
+        {
+            id: "18",
+            name: "Venerate headphone Stand",
+            price: "₹269 87%off",
+            image: "https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg",
+            cat: "essential",
+            section: "Daily Essentials"
+        },
+        {
+            id: "19",
+            name: "D20 Fitness SmartWatch",
+            img: "https://gd.image-gmkt.com/li/066/347/1706347066.g_800-w-st_g.jpg",
+            price: "₹499 62%Off",
+            cat: "prime",
+            section: "special discount"
+        },
+        {
+            id: "20",
+            name: "D20 Fitness SmartWatch",
+            img: "https://gd.image-gmkt.com/li/397/137/1729137397.g_800-w-st_g.jpg",
+            price: "₹499 62%Off",
+            cat: "prime",
+            section: "special discount"
+        }
+    ]
+
+    let formEl = document.querySelector("form")
+    let srchbar = document.getElementById("search")
+
+    formEl.addEventListener("submit", (e) => {
+        e.preventDefault()
+        let srchValue = srchbar.value
+        change = document.getElementById("chnge")
+        change.innerText = "Search Result for " + srchValue
+        let search = forSearch.filter((ele) => {
+            if (ele.cat.toUpperCase().includes(srchValue.toUpperCase()) == true) {
+                return true
+            } else {
+                return false
+            }
+        })
+        display(search)
+    })
+
+    // let mobile = [
+    //     {
+    //         id: "21",
+    //         img: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg",
+    //         name: "iphone xs",
+    //         price: "₹29,800",
+    //         dicount: "₹89,999"
+
+    //     },
+    //     {
+    //         id: "22",
+    //         img: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg",
+    //         name: "iphone xs",
+    //         price: "₹29,800",
+    //         dicount: "₹89,999"
+
+    //     },
+    //     {
+    //         id: "23",
+    //         img: "https://cdn.shopclues.com/images1/thumbnails/116585/200/200/153159462-116585740-1662131189.jpg",
+    //         name: "iphone 14",
+    //         price: "₹29,800",
+    //         dicount: "₹89,999"
+    //     },
+    //     {
+    //         id: "24",
+    //         img: "https://cdn.shopclues.com/images1/thumbnails/104712/200/200/148929037-104712190-1580285846.jpg",
+    //         name: "iphone 8",
+    //         price: "₹29,800",
+    //         dicount: "₹89,999"
+    //     },
+    //     {
+    //         id: "25",
+    //         img: "https://cdn.shopclues.com/images1/thumbnails/116611/200/200/153167480-116611731-1663917326.jpg",
+    //         name: "iphone xs",
+    //         price: "₹29,800",
+    //         dicount: "₹89,999"
+    //     }
+    // ]
 
 </script>
 

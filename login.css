@@ -1,13 +1,15 @@
 body{
-    /* background-color:aliceblue */
+    background-image: url(/background.jpg);
+    opacity: 0.9
 }
 #container{
     margin: auto;
     margin-top: 80px;
     width: 850px;
     height: 580px;
-    border: solid black;
+    /* border: solid black; */
     display: flex;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     background-color: aliceblue;
 }
 #container> img{
@@ -28,20 +30,25 @@ h1{
 form{
     margin-top: 50px;
     padding-left: 70px;
-}
-.pass {
-    margin-top: 30px;
-    margin-bottom: 0;
-}
-.email > input{
+} 
+#email {
     width: 80%;
-    padding: 10px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 15px;
+    border-radius: 8px;
 }
-.pass > input {
-    margin-top: 0px;
+
+#pass {
     width: 80%;
-    padding: 10px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 15px;
+    border-radius: 8px;
 }
+
 .forget{
     text-align: right;
     padding-right: 88px;
@@ -52,7 +59,19 @@ form{
     font-size: larger;
     padding-top: 13px;
     padding-bottom: 10px;
-    width: 85%;
+    width: 82%;
     margin-top: 50px;
     border-width: thin; 
+}
+p {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 8px;
+}
+
+span {
+    text-align: center;
+    text-decoration: none;
+    margin-left: 25%;
+
 }

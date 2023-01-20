@@ -15,42 +15,46 @@
         <div class="form">
             <h1>Login</h1>
             <form>
-                <div class="email">
-                    <p>Enter Your E-mail</p>
-                    <input type="email" required placeholder="Enter Your Email" id="email">
-                </div>
-                <div class="pass">
-                    <p>Enter your Password</p>
-                    <input type="password" required placeholder="Enter Your Password" id="pass">
-                </div>
-                <div class="forget">Forger Password?</div>
-                <a href=""><input type="submit" value="Login" id="login">
-                </a>
-                <div class="signUp">
-                    Not a member? <a href="">Signup</a>
-                </div>
+
+                <p>Enter Your E-mail</p>
+                <input type="email" required placeholder="Enter Your Email" id="email">
+
+                <p>Enter your Password</p>
+                <input type="password" required placeholder="Enter Your Password" id="pass">
+
+                <br><span class="forget">Forger Password?</span>
+
+                <input type="submit" value="Login" id="login">
+                <br><span> Not a member?</span> <a href="">Signup</a>
             </form>
         </div>
     </div>
+
 </body>
 <script>
 
-    let credential = JSON.parse(localStorage.getItem("credential")) || []
-
-    let email = document.getElementById("email")
-    let pass = document.getElementById("pass")
+    let fromSignup = JSON.parse(localStorage.getItem("SignUp")) || []
+    console.log(fromSignup)
     let formEl = document.querySelector("form")
-
+    let mail = document.getElementById("email")
+    let password = document.getElementById("pass")
+    let loginData = []
     formEl.addEventListener("submit", (e) => {
         e.preventDefault()
         let inpData = {
-            email: email.value,
-            pass: pass.value
+            email: mail.value,
+            pass: password.value
         }
-        credential.push(inpData)
-        localStorage.setItem("credential", JSON.stringify(credential))
+        loginData.push(inpData)
+        fromSignup.forEach((ele, ind) => {
+            if (ele.mail == inpData.email && ele.password == inpData.pass) {
+                alert("login successful")
+                window.location.href = "/index.html"
+            } else {
+                alert("wrong credential")
+            }
+        })
     })
-
 
 </script>
 

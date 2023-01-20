@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div id="upperHead">
+            <div>
+                <p>Sell With Us | Call US | Download App :</p>
+                <img src="/android2.png" alt="">
+                <p></p>
+                <img src="/apple.png" alt="">
+                <img src="/windows.png" alt="">
+            </div>
+        </div>
+        <div id="head">
+            <img src="/WhatsApp Image 2023-01-17 at 3.20.47 PM.jpeg" alt="" id="logo">
+            <form action="">
+                <input type="search" placeholder="What are you looking for?" id="search">
+                <input id="srcbtn" value="Search" type="submit">
+            </form>
+            <div id="noti">
+                <img src="/location.png" alt="">
+                <img src="/notification.jpg" alt="">
+                <img src="/wishlist.png" alt="">
+                <img src="/cart.png" alt="">
+            </div>
+            <div id="login">
+                <p><a href="/Login.html"> Login</a></p>
+                <p><a href="/signup.html"> Sign In</a></p>
+            </div>
+        </div>
+        <div id="catagories">
+            <div>
+                <p> MOBILE & MORE</p>
+                <p>MEN</p>
+                <p>WOMEN</p>
+                <p>HOME & KITCHEN</p>
+                <p>APPLIANCE</p>
+                <p>SPORTS & MORE</p>
+                <P>ESSENTIALS</P>
+                <p>OFFERS</p>
+                <p>GLOBAL SHOPPING</p>
+            </div>
+        </div>
+    </div>
+    <div id="pro">
+        <div>
+            <img src="https://cdn.shopclues.com/images1/thumbnails/115246/320/320/152689876-115246212-1659944528.jpg"
+                alt="">
+        </div>
+        <div>
+            <p id="name">
+                Venerate Headphone Stand <br> Headset Holder Earphone Stand with
+                <br> Aluminum Supporting Bar (Black)
+            </p>
+            <p>product id : 468545454</p>
+            <h2>₹269</h2>
+            <h4>87% Off</h4>
+            <div>
+                <button id="add">Add To Cart</button>
+                <button id="buy">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    let h2 = document.querySelector("h2")
+    let name = document.getElementById("name")
+    let h4 = document.querySelector("h4")
+    let img = document.querySelector("img")
+    img.setAttribute("src", "https://cdn.shopclues.com/images1/thumbnails/115246/320/320/152689876-115246212-1659944528.jpg")
+    let add = document.getElementById("add")
+    let Buy = document.getElementById("buy")
+    let link = "https://cdn.shopclues.com/images1/thumbnails/115246/320/320/152689876-115246212-1659944528.jpg"
+    let toADC = JSON.parse(localStorage.getItem("cart")) || []
+
+    add.addEventListener("click", () => {
+        let proData = {
+            name: name.innerText,
+            img: link,
+            price: h2.innerText,
+            off: h4.innerText
+        }
+        toADC.push(proData)
+        localStorage.setItem("cart", JSON.stringify(toADC))
+        // console.log(proData)
+    })
+
+
+
+
+
+</script>
+
+</html>

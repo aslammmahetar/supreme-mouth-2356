@@ -41,9 +41,9 @@
 <script>
     let firstName = document.getElementById("fname")
     let lastName = document.getElementById("lname")
-    let email = document.getAnimations("email")
     let pass = document.getElementById("pass")
     let formEl = document.querySelector("form")
+    let mail = document.getElementById("email")
 
     let sign = JSON.parse(localStorage.getItem("SignUp")) || []
 
@@ -52,11 +52,16 @@
         let formData = {
             fname: firstName.value,
             lname: lastName.value,
-            mail: email.value,
+            mail: mail.value,
             password: pass.value
         }
         sign.push(formData)
         localStorage.setItem("SignUp", JSON.stringify(sign))
+        sign.forEach((ele, ind) => {
+            if (ele.mail == formData.mail) {
+                window.location.href = "/index.html"
+            }
+        })
     })
 
 
