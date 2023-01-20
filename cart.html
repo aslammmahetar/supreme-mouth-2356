@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <div id="head">
+        <a href="/index.html">
+            <img id="logo" src="/WhatsApp Image 2023-01-17 at 3.20.47 PM.jpeg" alt="">
+        </a>
+    </div>
+    <div id="Product">
+        <h1>My Cart (<span>0</span> Item) </h1>
+        <hr>
+    </div>
+</body>
+
+<script>
+    let fromPro = JSON.parse(localStorage.getItem("cart")) || []
+    let pro = document.getElementById("Product")
+
+    function display(fromPro) {
+        fromPro.forEach((ele, ind) => {
+            let div
+        })
+    }
+</script>
+
+</html>
