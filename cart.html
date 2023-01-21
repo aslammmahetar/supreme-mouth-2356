@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart page</title>
     <link rel="stylesheet" href="cart.css">
 </head>
 
@@ -18,18 +18,85 @@
     <div id="Product">
         <h1>My Cart (<span>0</span> Item) </h1>
         <hr>
+        <div id="added"></div>
+    </div>
+    <div id="total">
+        <h2>Grand Total : <span id="sum"></span></h2>
+
     </div>
 </body>
 
 <script>
     let fromPro = JSON.parse(localStorage.getItem("cart")) || []
-    let pro = document.getElementById("Product")
 
+
+    let pro = document.getElementById("added")
+
+    let span = document.querySelector("span")
+
+    // span.innerText = fromPro.length
+
+    let total = document.getElementById("sum")
     function display(fromPro) {
+        pro.innerHTML = ""
         fromPro.forEach((ele, ind) => {
-            let div
+            let div = document.createElement("div")
+            let subDiv = document.createElement("div")
+            let img = document.createElement("img")
+            img.setAttribute("src", ele.img)
+            div.setAttribute("class", "items")
+            let p = document.createElement("p")
+            p.innerText = ele.name
+            let rs = document.createElement("h2")
+            rs.innerText = "₹"
+            let price = document.createElement("h2")
+            price.innerText = ele.price
+            let quntity = document.createElement("span")
+            quntity.innerText = ele.quntity
+            let pbtn = document.createElement("button")
+            pbtn.innerText = "+"
+            pbtn.addEventListener("click", () => {
+                ele = ele.quntity++
+                localStorage.setItem("cart", JSON.stringify(fromPro))
+                display(fromPro)
+            })
+            let mbtn = document.createElement("button")
+            mbtn.innerText = "-"
+            mbtn.addEventListener("click", () => {
+                if (ele.quntity > 1) {
+                    ele = ele.quntity--
+                    localStorage.setItem("cart", JSON.stringify(fromPro))
+                    display(fromPro)
+                }
+            })
+            let remove = document.createElement("p")
+            remove.innerText = "Remove"
+            remove.addEventListener("click", () => {
+                fromPro = fromPro.filter((ele, index) => {
+                    if (index == ind) {
+                        return false
+                    } else {
+                        return true
+                    }
+                })
+                localStorage.setItem("cart", JSON.stringify(fromPro))
+                display(fromPro)
+            })
+            subDiv.append(price, pbtn, quntity, mbtn, remove)
+            div.append(img, p, subDiv)
+            pro.append(div)
         })
+        let sum = 0
+        for (let i = 0; i < fromPro.length; i++) {
+            sum += fromPro[i].price * fromPro[i].quntity
+        }
+        total.innerText = sum
+        span.innerText = fromPro.length
     }
+    display(fromPro)
+
+
+
 </script>
 
 </html>

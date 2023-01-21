@@ -32,11 +32,11 @@
                 <img src="/location.png" alt="">
                 <img src="/notification.jpg" alt="">
                 <img src="/wishlist.png" alt="">
-                <img src="/cart.png" alt="">
+                <img src="/cart.png" alt="" id="cart">
             </div>
             <div id="login">
-                <p><a href="/Login.html"> Login</a></p>
-                <p><a href="/signup.html"> Sign In</a></p>
+                <p><a href="/Login.html" class="logSign"> Login</a></p>
+                <p><a href="/signup.html" class="logSign"> Sign In</a></p>
             </div>
         </div>
         <div id="catagories">
@@ -164,7 +164,6 @@
             <img src="/Twitter.jpg" alt="">
             <!-- <img src="" alt=""> -->
         </div>
-        <div></div>
     </div>
 </body>
 <script>
@@ -256,7 +255,7 @@
             let div = document.createElement("div")
             let pic = document.createElement("img")
             pic.setAttribute("src", ele.image)
-
+            pic.setAttribute("id", "image")
             let h4 = document.createElement("p")
             h4.innerText = ele.name
             let price = document.createElement("h4")
@@ -619,52 +618,29 @@
         let search = forSearch.filter((ele) => {
             if (ele.cat.toUpperCase().includes(srchValue.toUpperCase()) == true) {
                 return true
-            } else {
+            } else if (srchValue == "mobile") {
+                window.location.href = "/mobile.html"
+            }
+            else {
                 return false
             }
         })
         display(search)
     })
 
-    // let mobile = [
-    //     {
-    //         id: "21",
-    //         img: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg",
-    //         name: "iphone xs",
-    //         price: "₹29,800",
-    //         dicount: "₹89,999"
+    let cartPage = document.getElementById("cart")
+    cartPage.addEventListener("click", () => {
+        window.location.href = "/cart.html"
+    })
 
-    //     },
-    //     {
-    //         id: "22",
-    //         img: "https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1659944528.jpg",
-    //         name: "iphone xs",
-    //         price: "₹29,800",
-    //         dicount: "₹89,999"
+    let propage = document.getElementById("image")
+    propage.addEventListener("click", () => {
+        window.location.href = "/product.html"
+    })
 
-    //     },
-    //     {
-    //         id: "23",
-    //         img: "https://cdn.shopclues.com/images1/thumbnails/116585/200/200/153159462-116585740-1662131189.jpg",
-    //         name: "iphone 14",
-    //         price: "₹29,800",
-    //         dicount: "₹89,999"
-    //     },
-    //     {
-    //         id: "24",
-    //         img: "https://cdn.shopclues.com/images1/thumbnails/104712/200/200/148929037-104712190-1580285846.jpg",
-    //         name: "iphone 8",
-    //         price: "₹29,800",
-    //         dicount: "₹89,999"
-    //     },
-    //     {
-    //         id: "25",
-    //         img: "https://cdn.shopclues.com/images1/thumbnails/116611/200/200/153167480-116611731-1663917326.jpg",
-    //         name: "iphone xs",
-    //         price: "₹29,800",
-    //         dicount: "₹89,999"
-    //     }
-    // ]
+
+
+
 
 </script>
 

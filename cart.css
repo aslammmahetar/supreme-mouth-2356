@@ -16,7 +16,7 @@ body{
     margin-left: 100px;
 }
 #Product{
-    height: 100px;
+    /* height: 100px; */
     /* border: solid black; */
     width: 100%;
     border-radius: 5px;
@@ -28,4 +28,26 @@ body{
 #Product>h1{
     font-family: sans-serif;
     margin-left: 10px;
+}
+.items{
+    display: flex;
+    /* padding-left: 30px; */
+    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 15px;
+}
+.items>img{
+    width: 15%;
+    margin-top: 25px;
+}
+.items>p{
+    margin-top: 50px;
+    text-align: left;
+}
+.items>div>button{
+    width: 50px;
+    margin-right: 20px;
+}
+.items>div>span{
+    margin-right: 20px;
 }
