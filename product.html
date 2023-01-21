@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Page</title>
     <link rel="stylesheet" href="product.css">
 </head>
 
@@ -15,7 +15,6 @@
             <div>
                 <p>Sell With Us | Call US | Download App :</p>
                 <img src="/android2.png" alt="">
-                <p></p>
                 <img src="/apple.png" alt="">
                 <img src="/windows.png" alt="">
             </div>
@@ -30,7 +29,7 @@
                 <img src="/location.png" alt="">
                 <img src="/notification.jpg" alt="">
                 <img src="/wishlist.png" alt="">
-                <img src="/cart.png" alt="">
+                <img src="/cart.png" alt="" id="cart">
             </div>
             <div id="login">
                 <p><a href="/Login.html"> Login</a></p>
@@ -62,7 +61,7 @@
                 <br> Aluminum Supporting Bar (Black)
             </p>
             <p>product id : 468545454</p>
-            <h2>₹269</h2>
+            <h2>269</h2>
             <h4>87% Off</h4>
             <div>
                 <button id="add">Add To Cart</button>
@@ -70,7 +69,70 @@
             </div>
         </div>
     </div>
-
+    <div id="docs">
+        <div>
+            <h4>Shopper Central</h4>
+            <br>
+            <p>Easy Returns & Replacement</p>
+            <p>Sign In/Register</p>
+            <p>Our Policies</p>
+            <p>ClueBucks</p>
+            <p>Payment Options</p>
+            <p>ShopSan Surety</p>
+            <p>FAQ's</p>
+            <p>Service Center</p>
+            <p>User Agreement</p>
+        </div>
+        <div>
+            <h4>Merchant Central</h4>
+            <br>
+            <p>Merchant Panel</p>
+            <p>How To sell</p>
+            <p>Commision Structure</p>
+            <p>Fullfillment Policy</p>
+            <p>Policies & Rules</p>
+            <p>User Agreement</p>
+            <p>Testimonial</p>
+            <p>Seller Summit</p>
+            <p>Merchant Blog</p>
+            <p>Developer Resource</p>
+        </div>
+        <div>
+            <h4>About Us</h4>
+            <br>
+            <p>History</p>
+            <p>Band of Trust</p>
+            <p>In The News</p>
+            <p>Awards</p>
+            <p>
+                Careers
+            </p>
+            <p>Blog</p>
+        </div>
+        <div>
+            <h4>Contact Us</h4>
+            <br>
+            <p>Merchant Support</p>
+            <p>Bulk Orders</p>
+            <p>Press</p>
+        </div>
+        <div>
+            <h4>Press</h4>
+            <br>
+            <p>In the News</p>
+        </div>
+    </div>
+    <div id="footer">
+        <h3>Keep In Touch</h3>
+        <div>
+            <img src="/Facebook.png" alt="">
+            <img src="/pinterest.jpg" alt="">
+            <img src="/linked in.png" alt="">
+            <img src="/youtube2.png" alt="">
+            <img src="/Twitter.jpg" alt="">
+            <!-- <img src="" alt=""> -->
+        </div>
+    </div>
 </body>
 <script>
 
@@ -91,11 +153,20 @@
             price: h2.innerText,
             off: h4.innerText
         }
-        toADC.push(proData)
+        toADC.push({ ...proData, quntity: 1 })
         localStorage.setItem("cart", JSON.stringify(toADC))
         // console.log(proData)
+        alert("Product Added To The Cart Keep Shopping 👍")
     })
+    let cartpage = document.getElementById("cart")
+    cartpage.addEventListener("click", () => {
+        window.location.href = "/cart.html"
+    })
+    let homepage = document.getElementById("logo")
 
+    homepage.addEventListener("click", () => {
+        window.location.href = "/index.html"
+    })
 
 
 
