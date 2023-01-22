@@ -41,7 +41,7 @@
         </div>
         <div id="catagories">
             <div>
-                <p> MOBILE & MORE</p>
+                <p id="mbl"> MOBILE & MORE</p>
                 <p>MEN</p>
                 <p>WOMEN</p>
                 <p>HOME & KITCHEN</p>
@@ -642,7 +642,10 @@
     logo.addEventListener("click", () => {
         window.location.href = "/index.html"
     })
-
+    let mbl = document.getElementById("mbl")
+    mbl.addEventListener("click", () => {
+        window.location.href = "/mobile.html"
+    })
 
 
 </script>
