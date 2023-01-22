@@ -49,11 +49,6 @@ form{
     border-radius: 8px;
 }
 
-.forget{
-    text-align: right;
-    padding-right: 88px;
-    margin-top: 10px;
-}
 #login{
     border-radius: 10px;
     font-size: larger;
@@ -62,6 +57,7 @@ form{
     width: 82%;
     margin-top: 50px;
     border-width: thin; 
+    margin-bottom: 50px;
 }
 p {
     font-size: 20px;
@@ -73,5 +69,4 @@ span {
     text-align: center;
     text-decoration: none;
     margin-left: 25%;
-
 }
